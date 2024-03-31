@@ -266,7 +266,6 @@ fi
 # Merge preserved files from Firefox
 #
 # components
-rmdir components
 mv components-fx components
 
 mv defaults defaults-z
@@ -880,6 +879,7 @@ if [ $BUILD_LINUX == 1 ]; then
 		cp -RH "$CALLDIR/modules/zotero-libreoffice-integration/install" "$APPDIR/integration/libreoffice"
 		
 		# Copy icons
+		mkdir -p "$APPDIR/icons/" 
 		cp "$CALLDIR/linux/icons/icon32.png" "$APPDIR/icons/"
 		cp "$CALLDIR/linux/icons/icon64.png" "$APPDIR/icons/"
 		cp "$CALLDIR/linux/icons/icon128.png" "$APPDIR/icons/"
